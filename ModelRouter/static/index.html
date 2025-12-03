@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Router Chat</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Model Router</h1>
+            <div id="status-bar">
+                <span>Active Models: <span id="model-count">0</span></span>
+            </div>
+        </header>
+
+        <main id="chat-container">
+            <div id="messages">
+                <!-- Messages will appear here -->
+                <div class="message system">
+                    <div class="content">Welcome to Model Router! Ask me anything.</div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="input-area">
+                <textarea id="user-input" placeholder="Type your message..."></textarea>
+                <button id="send-btn">Send</button>
+            </div>
+            <div class="controls">
+                <button id="add-knowledge-btn">Add Context</button>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Knowledge Modal -->
+    <div id="knowledge-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add Knowledge to Context</h2>
+            <textarea id="knowledge-input" placeholder="Enter text to add to vector database..."></textarea>
+            <button id="save-knowledge-btn">Save to Context</button>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
